@@ -91,6 +91,7 @@ namespace virtual_iter
         {
             m_impl->destroy (*this);
             m_impl = rhs.m_impl;
+            m_impl->instantiate(*this, rhs);
             return *this;
         }
 
