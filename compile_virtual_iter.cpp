@@ -38,7 +38,7 @@ int main()
     std::cout << "result: " << result << std::endl;
     std::cout << "vector iterator timing: " << timespan.count () << std::endl;
 
-    auto impl = virtual_iter::std_fwd_iter_impl<std::vector<int>, 48>();
+    auto impl = virtual_iter::std_fwd_iter_impl<std::vector<int>::const_iterator, 48>();
 
     virtual_iter::fwd_iter<int, 48> itr (impl, vec.begin ());
     virtual_iter::fwd_iter<int, 48> endItr (impl, vec.end ());
